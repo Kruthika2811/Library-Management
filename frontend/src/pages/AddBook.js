@@ -1,38 +1,8 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
 
-// function AddBook() {
-//   const [book, setBook] = useState({ title: '', author: '', category: '', available: true });
-
-//   const addBook = async (e) => {
-//     e.preventDefault();
-//     try {
-//       await axios.post('http://localhost:5000/api/books', book, {
-//         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
-//       });
-//       alert("Book added");
-//       window.location.href = "/";
-//     } catch (err) {
-//       alert("Error adding book");
-//     }
-//   };
-
-//   return (
-//     <form onSubmit={addBook}>
-//       <h2>Add New Book</h2>
-//       <input placeholder="Title" onChange={(e) => setBook({ ...book, title: e.target.value })} required />
-//       <input placeholder="Author" onChange={(e) => setBook({ ...book, author: e.target.value })} required />
-//       <input placeholder="Category" onChange={(e) => setBook({ ...book, category: e.target.value })} required />
-//       <button type="submit">Add Book</button>
-//     </form>
-//   );
-// }
-
-// export default AddBook;
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import './AddBook.css'; // Import the CSS file
+import './AddBook.css'; 
 
 function AddBook() {
   const [book, setBook] = useState({ title: '', author: '', category: '', available: true });
