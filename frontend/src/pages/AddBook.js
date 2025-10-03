@@ -10,7 +10,7 @@ function AddBook() {
   const addBook = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://library-management-1-vnap.onrender.com/api/books', book, {
+      await axios.post( `${process.env.REACT_APP_API_URL}/api/books`, book, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
       });
       alert("Book added");

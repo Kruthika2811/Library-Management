@@ -50,7 +50,7 @@ function Register() {
   const registerUser = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://library-management-1-vnap.onrender.com/api/users/register', form);
+      const res = await axios.post( `${process.env.REACT_APP_API_URL}/api/users/register`, form);
       alert("Registration successful");
       window.location.href = "/login";
     } catch (err) {
